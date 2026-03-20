@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewPage</title>
+</head>
+<body>
+<%- include("./nav.ejs") %>
+
+<form method="post" action="/new">
+    <h1></h1>
+    <label for="user">author</label><input id="user" name="user" type="text">
+
+    <label for="message">message <input id="message" name="message" type="text"></label>
+
+    <button type="submit">submit</button>
+</form>
+
+
+</body>
+</html>

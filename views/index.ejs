@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+
+<%- include("./nav.ejs") %>
+
+<% messages.forEach((message) => { %>
+<h1><%= message.text %></h1>
+<p><%= message.user %></p>
+<div><%= message.added %></div>
+<% }) %>
+
+
+</body>
+</html>
