@@ -18,7 +18,7 @@ app.use("/", indexRoutes)
 app.use("/new", newRoutes)
 
 
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, (error) => {
     if (error) {
         throw error;
