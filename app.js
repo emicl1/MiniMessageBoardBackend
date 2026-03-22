@@ -1,6 +1,7 @@
 const express = require("express");
 const indexRoutes = require("./routes/index")
 const newRoutes = require("./routes/new.js")
+const {body, validationResult} = require("express-validator")
 
 const app = express();
 

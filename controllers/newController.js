@@ -1,17 +1,14 @@
 
-const {messages} = require("../models/messages")
+const db = require("../db/queries")
 
 const newPage = (req, res) =>{
     res.render("newPage")
 }
 
 
-const newMesage = (req, res) => {
-    messages.push({
-        user: req.body.user,
-        text: req.body.message,
-        added: new Date()
-    })
+const newMesage = async (req, res) => {
+    console.log(req.body.user + req.body.message)
+    await db.addMessage(req.body.user, req.body.message)
     res.redirect("/")
 }
 
