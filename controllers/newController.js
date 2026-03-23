@@ -7,8 +7,8 @@ const newPage = (req, res) =>{
 
 
 const newMesage = async (req, res) => {
-    console.log(req.body.user + req.body.message)
-    await db.addMessage(req.body.user, req.body.message)
+    let user = await db.findUserById(req.body.user)
+    await db.addMessage(user.id, req.body.message)
     res.redirect("/")
 }
 

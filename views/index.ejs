@@ -10,7 +10,7 @@
 <% if (locals.messages){ %>
     <%console.log(messages)%>
     <% messages.forEach((message) => { %>
-        <h1><%= message.username %></h1>
+        <h1><%= message.author %></h1>
         <p><%= message.message %></p>
     <% }) %>
 <% } %>
